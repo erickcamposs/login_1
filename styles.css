@@ -18,7 +18,7 @@ body{
 .form-container{
     background-color: white;
     border-radius: 10px;
-    width: 80%;
+    width: 95%;
     overflow: hidden;
     height: 85%;
     display: flex;
@@ -66,6 +66,9 @@ body{
     }
 }
 @media (min-width: 992px){
+    .form-container{
+        width: 75%;
+    }
     .login-conteiner{
         padding: 0 30px;
         min-width: 50%;
