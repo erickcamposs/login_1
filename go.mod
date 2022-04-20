@@ -3,6 +3,7 @@ module packs
 go 1.18
 
 require (
+	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/howeyc/fsnotify v0.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
