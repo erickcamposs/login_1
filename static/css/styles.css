@@ -24,9 +24,17 @@ body{
     display: flex;
     align-items: center;
 }
+.form-container-new{
+    height: 99%;
+    padding: 40px 0;
+}
 @media (min-width: 480px){
     .form-container{
         height: 90%;
+    }
+    .form-container-new{
+        height: 100%;
+        padding: 40px 0;
     }
 }
 .login-conteiner{
@@ -45,12 +53,18 @@ body{
         height: 90%;
     }
 }
-.welcome-screen-container{
+.welcome-screen-container,
+.welcome-screen-container-new
+{
     display: none;
 }
 @media (min-width: 768px){
     .form-container{
         justify-content: space-between;
+    }
+    .form-container-new{
+        height: 100%;
+        padding: 0;
     }
     .login-conteiner{
         padding: 0 50px;
@@ -58,7 +72,16 @@ body{
     }
     .welcome-screen-container{
         display: flex;
-        background-image: url(img/welcome.jpg);
+        background-image: url(../img/welcome.jpg);
+        background-position: center center;
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+    }
+
+    .welcome-screen-container-new{
+        display: flex;
+        background-image: url(../img/signup.jpg);
         background-position: center center;
         background-size: cover;
         width: 50%;
@@ -86,6 +109,12 @@ body{
     font-size: 1.8rem;
     margin: 0;
 }
+.login-conteiner > h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4srem;
+    margin: 0;
+}
 .login-conteiner > p{
     text-align: center;
     color: rgb(112, 112, 112);
@@ -100,13 +129,19 @@ label{
     font-weight: bold;
     text-align: start;
 }
-input[type = "text"]{
+input[type = "text"],
+input[type = "email"],
+input[type = "number"]
+{
     min-width: 100%;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #e1e1e1;
 }
-input[type = "text"]:focus{
+input[type = "text"]:focus,
+input[type = "email"]:focus,
+input[type = "number"]:focus
+{
     outline: solid 1.5px rgb(0, 111, 104);;
 }
 .options{
@@ -114,15 +149,17 @@ input[type = "text"]:focus{
     justify-content: space-between;
     font-size: 17px;
 }
-.forgot a{
+.forgot a, 
+.new a{
     text-decoration: none;
     color: rgb(0, 111, 104);
 }
-.forgot a:hover{
+.forgot a:hover,
+.new a:hover{
     color: rgb(1, 63, 59);
     text-decoration: underline;
 }
-.providers .choose{
+.providers .choose, .chooseOr{
     text-align: center;
     color: rgb(112, 112, 112);
     margin: 15px 0;
@@ -138,6 +175,16 @@ input[type = "text"]:focus{
     font-weight: bold;
     border-radius: 5px;
     margin: 0 auto 10px auto;
+}
+.btn.regresar{
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+.btn.regresar:hover{
+    background-color: rgb(216, 255, 252);
 }
 @media (min-width: 1200px){
     .btn{
